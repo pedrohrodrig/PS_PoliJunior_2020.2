@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>HELLP3!</title>
+    <link rel="icon" type="imagem/png" href="img/icon.png"/>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+    <script src="js/deslogado.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <!-- menu de navegação -->
+            <nav class="navbar" id="navbar">
+                <div class="smallNav">
+                  <a href="#" class='logo'><h1 class='logo'>HELLP3!</h1></a>
+                  <a href="#" class="icon"><i id="menuNav" class="fa fa-bars"></i></a>
+                </div>
+                <a href="#cadastro">Cadastro</a>
+                <a href="#contato">Contato</a>
+                <a href="#login">Entrar</a>
+              </nav>
+        </header>
+    </div>
+    <div class="conteudo">
+        <!-- conteudos em texto do site -->
+        <div class='inicio' style="background-image: url('img/relogio.jpg'); width: auto; height: 700px; background-repeat: no-repeat;">
+            <div class="linha">
+                <section class='txt'>
+                    <div class="coluna col8" id='pravc'>
+                        <div class="pv">
+                            <h3>Para você <span class='nome' style="text-shadow: 0.05em 0.05em 0.4em rgba(243, 228, 14, 0.884);"></span></h3>
+                            <p>
+                                Politécnicx e/ou uspiane que, em época de final de semestre, mal tem tempo pra respirar, quem dirá
+                                calcular quanto precisa tirar na prova. 
+                                Assim, menos um estresse para ser passado por nós em tempos de pandemia, eu espero.
+                                <br/> Deixa que a gente faz essa conta por ti!
+                            </p>
+                        </div>
+                        <section id='infosDrop'>
+                            <div class="dpd" onclick="dropaTexto()">
+                                <div class="drop">
+                                    <h4 class="dropbtn">Como funciona?</h4>
+                                    <p id="myDropdown" class="dropdown">
+                                        Você tem duas opções:<br />
+                                        - Preencher manualmente a tabela abaixo com os dados para que o sistema faça o
+                                        cálculo da nota
+                                        <br />- Entrar na sua ou criar uma conta para acessar matérias já cadastradas ou para cadastrá-las,
+                                        fazendo com que o preenchimento seja automático para tais matérias.
+                                        <br /><br />O botão "Limpar" faz com que a tabela volte ao template original.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="linha">
+            <!-- calculadora com dados inseridos pelo usuário -->
+            <div id='tabela menor'>
+                <div class="coluna col12" id='calcman'>
+                    <div class="tabela deslog">
+                        <table>
+                            <h3>Calculadora</h3>
+                            <form>
+                                <tbody>
+                                    <tr class="preencher">
+                                        <th>Matéria</th>
+                                        <td>
+                                            <input id='materia' type='text' placeholder='Digite a materia (opcional)' />
+                                        </td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Nota P1</th>
+                                        <td><input id="p1_w" type="number" placeholder="Digite a nota" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Peso P1</th>
+                                        <td><input id="pp1_w" type="number" placeholder="Digite o peso" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Nota P2</th>
+                                        <td><input id="p2_w" type="number" placeholder="Digite a nota" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Peso P2</th>
+                                        <td><input id="pp2_w" type="number" placeholder="Digite o peso" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Peso P3</th>
+                                        <td><input id="pp3_w" type="number" placeholder="Digite o peso" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th>Média pretendida</th>
+                                        <td><input id="media_w" type="number" placeholder="Digite a média" /></td>
+                                    </tr>
+                                    <tr class="preencher">
+                                        <th id="tp3_w">Nota P3</th>
+                                        <td id="p3_w" style="text-align: center;">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr style="border: 1px solid transparent">
+                                        <td></td>
+                                        <td style="text-align: right;">
+                                            <button type="button"
+                                                onclick="calculoMedia('pp1_w', 'p1_w', 'pp2_w', 'p2_w', 'pp3_w', 'media_w', 'p3_w')">Calcular</button>
+                                        <button type="reset" onclick="retornaNulo()">Limpar</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </form>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fundoLoginCadastro">
+            <!-- forms para login dos usuários -->
+            <div class="linha">
+                <div class="coluna col6" id="login">
+                    <div class="login">
+                        <h3>Faça o login</h3>
+                        <form>
+                            <label for='email_login'>E-mail</label>
+                            <input id='email_login' type='email' placeholder="exemplo@algo.com" value='gabriela.hirata@usp.br'/>
+                            <label for='senha_login'>Senha</label>
+                            <input id='senha_login' type='password' placeholder="Digite sua senha" value='senhacriativa' />
+                            <button id='entrar' type='button'>Entrar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- forms para cadastro de um novo usuário -->
+                <div class="coluna col6" id="cadastro">
+                    <div class="cadastro">
+                        <h3>Cadastre-se</h3>
+                        <form>
+                            <label for='nome_cadastro'>Nome</label>
+                            <input id='nome_cadastro' type='text' placeholder="Digite seu nome" />
+                            <label for='email_cadastro' >Email</label>
+                            <input id='email_cadastro' type='email' placeholder='exemplo@algo.com' />
+                            <label for='senha_cadastro'>Senha</label>
+                            <input id='senha_cadastro' type='password' placeholder="Digite sua senha" />
+                            <label for="confirmaSenha">Confirme sua senha</label>
+                            <input id='confirmaSenha' type='password' placeholder="Digite sua senha" />
+                            <button id='finalizar' type='submit'>Finalizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rodapé com informações extras e links de compartilhamento -->
+    <div class="pe">
+        <footer>
+            <div class="infos">
+                <div class="linha">
+                    <div class="coluna col6" id='contato'>
+                        <h5>Contato</h5>
+                        <p><a href='mailto:contato@hellp3.com.br'>contato@hellp3.com.br</a></p>
+                        <p><a href='tel://(11) 1234-5678'>(11) 1234-5678</a></p>
+                    </div>
+                    <div class="coluna col6" id='responsive'>
+                        <h5>Compartilhe!</h5>
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" id='compartilhar' style="text-align: center;">
+                            <a class="a2a_button_facebook"></a>
+                            <a class="a2a_button_twitter"></a>
+                            <a class="a2a_button_whatsapp"></a>
+                            </div>
+                        <script async src="https://static.addtoany.com/menu/page.js"></script>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="linha">
+                <div class="coluna col12">
+                    <span>&copy; 2020 - PoliJúnior - Todos os direitos reservados</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

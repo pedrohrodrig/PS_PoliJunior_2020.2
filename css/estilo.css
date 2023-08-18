@@ -1,0 +1,373 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/* estrutura de grid */
+.linha{
+    width: 96%;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 5px 0;
+}
+.coluna{
+    padding: 0 1%;
+    float: left;
+}
+.col1{
+    width: 6%;
+}
+.col2{
+    width: 14%;
+}
+.col3{
+    width: 22%;
+}
+.col4{
+    width: 30%;
+}
+.col5{
+    width: 38%;
+}
+.col6{
+    width: 46%;
+}
+.col7{
+    width: 54%;
+}
+.col8{
+    width: 62%;
+}
+.col9{
+    width: 70%;
+}
+.col10{
+    width: 78%;
+}
+.col11{
+    width: 86%;
+}
+.col12{
+    width: 94%;
+}
+
+/* barra de navegação */
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(68, 80, 134, 0.9);
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+.navbar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: large;
+    transition-duration: 0.5s;
+}
+.navbar a:hover{
+    color: rgba(221, 208, 27, 0.884);
+    transition-duration: 0.5s;
+}
+.navbar .icon{
+    display:none;
+    color: rgba(243, 228, 14, 0.884);
+    font-size: 25px;
+}
+h1{
+    color: rgba(243, 228, 14, 0.884);
+    font-size: 200%;
+    cursor: pointer;
+}
+a.logo{
+    cursor: default;
+}
+
+/*texto "Para você" e "Como funciona?" */
+.txt{
+    padding-top: 110px;
+}
+.pv{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+section#infosDrop{
+    background-color: rgba(68, 80, 134, 0.95);
+    padding: 1% 2%;
+    margin-top: 2%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.nome{
+    text-shadow: 0.05em 0.05em 0.4em rgba(243, 228, 14, 0.884);
+}
+
+/* Formatação do "Como funciona?" e dropdown */
+h4{
+    color: white;
+    position: relative;
+    transition-duration: 0.5s;
+}
+h4.dropbtn:hover{
+    color: rgba(150, 149, 104, 0.801);
+    transition-duration: 0.3s;
+}
+.drop{
+    position: relative;
+    display: inline-block;
+}
+.dropdown{
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-width: 100%;
+    z-index: 1;
+}
+.show{
+    display: block;
+    max-width: 100%;
+    box-sizing: content-box;
+    padding: 5px 0 5px 5px;
+    margin: 0.5% 0%;
+}
+
+/* Login  e cadastro no site */
+.login, .cadastro{
+    width: 50%;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    border-radius: 10px;
+    background-color:rgba(13, 63, 170, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 20px;
+}
+.login input, .cadastro input{
+    height: 40px;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.85);
+    margin: 10px;
+    width: 80%;
+    font-size: 16px;
+    border: solid 1px rgba(13, 63, 170, 0.3);
+}
+.login form, .cadastro form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 7%;
+}
+.login{
+    margin: 15% auto auto;
+}
+.cadastro{
+    margin: 20px auto 20px;
+}
+.fundoLoginCadastro{
+    background-color: rgba(148, 145, 145, 0.1);
+}
+
+/* titulos do "Para você" e tabelas */
+h3{
+    font-size: 150%;
+}
+
+/* formatação das tabelas */
+.tabela h3{
+    text-align: center;
+}
+.tabela{
+    margin: 5% 0;
+    background-color: rgba(148, 145, 145, 0.1);
+    padding: 3% 0 5%;
+    border-radius: 20px;
+}
+#tabela#menor table{
+    margin: 5% auto;
+}
+tr input, tr select{
+    max-width: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(148, 145, 145, 0.2);
+}
+table {
+    border-collapse: collapse;
+    align-items: center;
+    width: 77%;
+    margin: 0 auto;
+}
+tr{
+    align-self: center;
+    background-color: whitesmoke;
+    border: transparent;
+    height: 30px;
+}
+td{
+    text-align: center;
+    max-width: 500px;
+}
+tr.preencher {
+    border: 1px solid black;
+}
+th{
+    border-right: 1px solid black;
+    max-width: 50%;
+}
+input{
+    text-align: center;
+}
+.tabela.deslog{
+    margin: 25px 25% 25px;
+}
+
+/* formulário de cadastro de matérias */
+.fundoCadastrar{
+    background-color: rgba(148, 145, 145, 0.1);
+}
+form h3{
+    font-size: 180%;
+}
+form.cadastroMaterias input{
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.85);
+    margin: 10px;
+    width: 50%;
+    font-size: 16px;
+    border: solid 1px rgba(13, 63, 170, 0.2);
+}
+form.cadastroMaterias{
+    width: 65%;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    padding-left: 0;
+    border-radius: 10px;
+    background-color:rgba(13, 63, 170, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#enviar, #entrar, #finalizar{
+    background-color: transparent;
+    border: 1px solid rgba(243, 228, 14, 0.884);
+    border-radius: 0;
+    width: 20%;
+    color: whitesmoke;
+    transition-duration: 0.3s;
+}
+#entrar, #finalizar{
+    width: 50%;
+    margin: 0 20%;
+}
+#enviar:hover, #entrar:hover, #finalizar:hover{
+    background-color: rgba(243, 228, 14, 0.884);
+    color: black;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+/* rodapé do site */
+.pe{
+    background: rgba(68, 80, 134, 0.9);
+    color: #ebebeb;
+    padding: 2% 0 2% 0;
+    text-align: center;
+}
+.infos h5{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#contato a{
+    color: rgba(243, 228, 14, 0.884);
+}
+#compartilhar{
+    display: inline-block;
+}
+
+/* para o formulário de cadastro de matérias não ficar tão pequeno em telas menores*/
+@media screen and (max-width: 900px){
+    form.cadastroMaterias{
+        width: 90%;
+    }
+    form h3{
+        font-size: 135%;
+    }
+    form.cadastroMaterias input{
+        width: 50%
+    }
+    .cadastro, .login{
+        width: 60%
+    }
+
+}
+
+/* adapta largura da tabela e outros detalhes */
+@media screen and (max-width: 820px){
+    .tabela.deslog{
+        margin: 0 auto;
+    }
+    .login{
+        margin-top: 20px;
+    }
+}
+
+/* aumenta largura pra melhor visualização */
+@media screen and (max-width: 700px){
+    .login, .cadastro{
+        width: 67%;
+    }
+}
+
+/* mostra o menu retrátil quando clica no botão */
+@media screen and (max-width: 600px){
+    .navbar :not(:first-child) {display: none;}
+    .navbar .icon {
+        display: block;
+    }
+    .navbar.responsive a {
+      display: inline-flex;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .smallNav{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    /* add padding para menu não sobrepor texto */
+    .txt.extraMargin{
+        margin-top: 110px;
+    }
+    
+}
+
+/* altera layout tabelas pela baixa largura da janela ou tela */
+@media screen and (max-width: 420px){
+    table{
+        font-size: small;
+    }
+    .tabela.deslog table tr{
+        font-size: small;
+    }
+    .login, .cadastro{
+        width: 80%;
+    }
+    .pe{
+        font-size: small;
+    }
+    #contato{
+        margin-bottom: 10px;
+    }
+}
